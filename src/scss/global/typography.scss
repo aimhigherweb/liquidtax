@@ -1,0 +1,48 @@
+body {
+	color: #000000;
+	font-family: var.$font_main;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+a {
+	color: var.$yellow;
+	text-underline-offset: 0.6em;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: var.$font_headings;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+nav {
+	font-family: var.$font_headings;
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
