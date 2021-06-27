@@ -5,6 +5,8 @@
 @import './global/typography.scss';
 @import './global/forms.scss';
 
+@import './blocks/index.scss';
+
 .block-editor-writing-flow {
 	color: #000000;
 	font-family: var.$font_main;

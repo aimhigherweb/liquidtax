@@ -1,2 +1,5 @@
+<h1><?php echo get_the_title(); ?></h1>
 
-<?php echo the_content(); ?>
+<div class="content">
+	<?php echo the_content(); ?>
+</div>

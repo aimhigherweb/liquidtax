@@ -1,18 +1,25 @@
 form {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px 0;
+
 	label {
+		display: block;
 		width: 100%;
 		margin: 0;
-		font-weight: 400;
+		padding: 10px 0;
+		font-weight: 700;
 		line-height: 1;
 	}
 
 	input, textarea, select {
 		width: 100%;
-		margin: 12px 0 45px;
-		padding: 6px 0;
+		margin: 12px 0 20px;
+		padding: 10px 15px;
 		border: none;
-		border-bottom: 1px solid var.$black;
-		background: var.$grey;
+		border: 2px solid var.$grey;
+		border-radius: 2em;
+		background: var.$white;
 		color: var.$black;
 		font-family: var.$font_headings;
 		font-size: 0.67em;
@@ -24,68 +31,65 @@ form {
 			opacity: 0.39;
 		}
 
-		&[type='checkbox'] {
+		&[type='checkbox'], &[type='radio'] {
 			position: absolute;
 			opacity: 0;
 			pointer-events: none;
 
 			& + label {
+				display: flex;
 				position: relative;
-				margin-bottom: 50px;
-				padding-left: 38px;
+				align-items: center;
+				margin-bottom: 10px;
 				font-family: var.$font_main;
-				font-size: 1em;
-				line-height: 1.33;
+				font-weight: 500;
+				line-height: 1;
+
+				&:before, &:after {
+					display: block;
+					border-radius: 50%;
+				}
 
 				&:before {
 					content: '';
-					display: block;
-					position: absolute;
-					top: -3px;
-					left: 0;
 					width: 24px;
 					height: 24px;
 					margin-right: 14px;
-					border: 1px solid #999999;
-					border-radius: 50%;
-					background: #ffffff;
+					border: 1px solid var.$navy;
+					background: var.$white;
+				}
+
+				&:after {
+					position: absolute;
+					left: 3px;
+					width: 18px;
+					height: 18px;
+					background: var.$blue;
 				}
 			}
 
 			&:checked {
 				& + label {
-					&:before {
-						content: '✓';
+					&:after {
+						content: '';
 						padding-left: 4px;
 					}
 				}
 			}
 		}
 
-		&[type='submit'] {
-			width: auto;
-			margin: 5px 0 0;
-			padding: 5px 40px 5px 0;
-			border: none;
-			background: none;
-			background-image: url('./src/img/arrow.png');
-			background-repeat: no-repeat;
-			background-position: right center;
-			background-size: 22px 22px;
-			color: var.$black;
-			font-family: var.$font_headings;
-			font-size: 0.67em;
-			text-transform: uppercase;
+		&[type='checkbox'] {
+			&:checked {
+				& + label {
+					&:after {
+						content: '✓';
+					}
+				}
+			}
 		}
 
 		&[type='search'] {
-			margin: 5px 0 0;
-			padding: 14px 40px 14px 0;
-			background: none;
-			background-image: url('./src/img/search.png');
-			background-repeat: no-repeat;
-			background-position: right center;
-			background-size: 22px 22px;
+			padding: 14px;
 			color: var.$black;
 			font-family: var.$font_main;
 			font-size: 1em;
@@ -99,243 +103,93 @@ form {
 	}
 
 	select {
-		padding: 10px 25px 10px 0;
-		background: none;
-		background-image: url('./src/img/arrow.png');
-		background-repeat: no-repeat;
-		background-position: right center;
-		background-size: 22px 22px;
-		appearance: none;
+		padding: 10px;
 	}
 
-	button[type='submit'] {
-		margin: 5px 0 0;
-		padding: 5px;
-		border: none;
-		background: none;
-		color: var.$black;
-		font-family: var.$font_headings;
-		font-size: 0.67em;
-		text-transform: uppercase;
+	button, input {
+		&[type='submit'] {
+			display: inline-block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			border: 2px solid var.$blue;
+			border-radius: 2em;
+			background: var.$blue;
+			color: var.$white;
+			font-family: var.$font_headings;
+			font-weight: 600;
+			line-height: 1;
+			text-transform: uppercase;
+
+			&:hover, &:focus {
+				background: var.$white;
+				color: var.$blue;
+			}
+		}
 	}
 
 	textarea {
-		height: 80px;
+		height: 100px;
 	}
 }
 
-.gform_wrapper {
-	.gform_description {
-		display: block;
-		max-width: 340px;
-		color: #333333;
+.wpforms-field {
+	.wpforms-field-row {
+		display: flex;
+		margin: 0 -2.5px;
 	}
 
-	form {
-		margin: 50px auto;
-		padding: 20px;
-		background: var.$grey;
+	.wpforms-one-half {
+		flex-grow: 1;
+		margin: 0 2.5px;
 
-		.gform_body.gform-body {
-			.gform_fields {
-				display: block;
-
-				label {
-					width: 100%;
-					margin: 0;
-					font-weight: 400;
-					line-height: 1;
-
-					a {
-						font-family: inherit;
-						font-size: inherit;
-						font-weight: 700;
-						text-transform: inherit;
-					}
-				}
-
-				input, textarea, select {
-					width: 100%;
-					margin: 12px 0 45px;
-					padding: 6px 0;
-					border: none;
-					border-bottom: 1px solid var.$black;
-					background: var.$grey;
-					color: var.$black;
-					font-family: var.$font_headings;
-					font-size: 0.67em;
-					font-weight: 400;
-					line-height: 1.25;
-					text-transform: uppercase;
-
-					&::placeholder, .gf_placeholder {
-						opacity: 0.39;
-					}
-
-					&[type='checkbox'] {
-						position: absolute;
-						opacity: 0;
-						pointer-events: none;
-
-						& + label {
-							position: relative;
-							margin-bottom: 50px;
-							padding-left: 38px;
-							font-family: var.$font_main;
-							font-size: 1em;
-							line-height: 1.33;
-
-							&:before {
-								content: '';
-								display: block;
-								position: absolute;
-								top: -3px;
-								left: 0;
-								width: 24px;
-								height: 24px;
-								margin-right: 14px;
-								border: 1px solid #999999;
-								border-radius: 50%;
-								background: #ffffff;
-							}
-						}
-
-						&:checked {
-							& + label {
-								&:before {
-									content: '✓';
-									padding-left: 4px;
-								}
-							}
-						}
-					}
-				}
-
-				select {
-					padding: 10px 25px 10px 0;
-					background: none;
-					background-image: url('./src/img/arrow.png');
-					background-repeat: no-repeat;
-					background-position: right center;
-					background-size: 22px 22px;
-					appearance: none;
-				}
-
-				textarea {
-					height: 80px;
-				}
+		&:first-child {
+			input {
+				border-radius: 20px 0 0 20px;
 			}
 		}
 
-		.gfield_validation_message {
-			margin-top: -40px;
-			margin-bottom: 50px;
-		}
-
-		input {
-			&[type='submit'] {
-				margin: 5px 0 0;
-				padding: 5px 40px 5px 0;
-				border: none;
-				background: none;
-				background-image: url('./src/img/arrow.png');
-				background-repeat: no-repeat;
-				background-position: right center;
-				background-size: 22px 22px;
-				color: var.$black;
-				font-family: var.$font_headings;
-				font-size: 0.67em;
-				text-transform: uppercase;
+		&:last-child {
+			input {
+				border-radius: 0 20px 20px 0;
 			}
 		}
-
-		.gform_footer, .gform_page_footer {
-			margin: 0;
-			padding: 0;
-		}
 	}
+}
 
-	.gform_submission_error {
-		position: static;
-		width: 100%;
+.wpforms-field-sublabel {
+	margin: -20px 0 20px 10px;
+	font-weight: 400;
+}
+
+.wpforms-field-radio {
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 	}
+}
+
+.wpforms-submit-container {
+	text-align: center;
 }
 
 @media(min-width: 40em) {
-	.gform_wrapper {
-		form {
-			padding: 50px;
+	.wpforms-field-radio {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
 
-			.gform_body.gform-body {
-				.gform_fields {
-					display: flex;
-					flex-wrap: wrap;
-					margin: 0 -8px;
-
-					.gfield {
-						flex: 1 1 40%;
-						margin: 0 8px;
-
-						&.full_width {
-							flex-basis: 100%;
-						}
-					}
-				}
+			label {
+				margin-right: 20px;
 			}
 		}
 	}
 
-	@supports(grid-template-areas: '.') {
-		.gform_wrapper {
+	.wpforms-container  {
+		&:first-child {
 			form {
-				.gform_body.gform-body {
-					.gform_fields {
-						display: grid;
-						grid-column-gap: 16px;
-						grid-row-gap: 0;
-						grid-template-columns: 1fr 1fr;
-						margin: 0;
-
-						.gfield {
-							margin: 0;
-
-							&:not(.gfield--width-full),
-							&.gfield--width-full {
-								grid-column: span 1;
-
-								&.full_width {
-									grid-column: span 2;
-								}
-							}
-
-							&.full_width {
-								grid-column: span 2;
-							}
-						}
-					}
-				}
-
-				.notice {
-					margin-top: -30px;
-					margin-bottom: 30px;
-				}
+				margin-top: 0;
 			}
-		}
-	}
-}
-
-@media(min-width: 50em) {
-	.gform_wrapper {
-		form {
-			padding: 80px 60px;
-		}
-	}
-}
-
-@media(min-width: 60em) {
-	.gform_wrapper {
-		form {
-			margin: 0;
 		}
 	}
 }

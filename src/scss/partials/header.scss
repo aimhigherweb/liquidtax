@@ -17,6 +17,10 @@
 		img, svg {
 			max-width: 100%;
 		}
+
+		&:hover {
+			filter: none;
+		}
 	}
 
 	.background {
@@ -36,6 +40,7 @@
 
 	nav {
 		position: relative;
+		z-index: 50;
 		font-size: 2em;
 		font-weight: 600;
 		text-align: center;
@@ -140,6 +145,7 @@
 
 				&.cta {
 					border-color: transparent;
+					background: none;
 					color: var.$blue;
 					line-height: 1;
 

@@ -1,0 +1,187 @@
+.footer {
+	position: relative;
+	margin-top: 100px;
+	padding: 20px 20px 0;
+	color: var.$white;
+	font-family: var.$font_headings;
+
+	.background {
+		color: var.$navy;
+
+		svg {
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			left: 50%;
+			width: auto;
+			max-width: unset;
+			height: 500px;
+			margin-left: 750px;
+			transform:translateX(-50%);
+		}
+	}
+
+	.logo {
+		display: block;
+		width: 250px;
+		margin: 0 auto;
+		filter: grayscale(1) brightness(10) contrast(10);
+
+		img, svg {
+			max-width: 100%;
+		}
+
+		&:hover {
+			filter: none;
+		}
+	}
+
+	.contact {
+		position: relative;
+		max-width: 400px;
+		margin: 0 auto;
+		padding-right: 50px;
+
+		h2 {
+			color: var.$grey;
+			font-size: 1.2em;
+		}
+
+		nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+
+			ul {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.footer_sub {
+	position: relative;
+	padding: 20px 0;
+	background: var.$blue;
+	text-align: center;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		transform: translateX(-50%);
+		background: inherit;
+	}
+
+	a {
+		color: var.$white;
+	}
+}
+
+nav {
+	&.social {
+		ul {
+			display: flex;
+			justify-content: center;
+		}
+
+		svg {
+			height: 3em;
+			fill: var.$yellow;
+			color: var.$navy;
+		}
+
+		a {
+			padding: 10px;
+
+			&:hover {
+				svg {
+					fill: var.$navy;
+					color: var.$yellow;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 40em) {
+	.footer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.background {
+			svg {
+				height: 700px;
+				margin-left: 0;
+			}
+		}
+
+		.logo {
+			margin: 0;
+		}
+
+		.contact {
+			margin: 0 0 0 auto;
+			padding: 0;
+
+			address, h2 {
+				margin-left: 10px;
+			}
+
+			nav {
+				position: static;
+
+				ul {
+					flex-direction: row;
+				}
+			}
+		}
+	}
+
+	nav {
+		&.social {
+			margin-bottom: 50px;
+
+			ul {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	.footer_sub {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+		text-align: left;
+
+		nav {
+			margin-left: 50px;
+		}
+
+		.copyright {
+			margin-left: auto;
+		}
+	}
+}
+
+@media(min-width: 60em) {
+	.footer {
+		width: 90vw;
+		max-width: 1200px;
+		margin: 200px auto 0;
+		padding: 50px 0 0;
+
+		.background {
+			svg {
+				margin-left: 300px;
+			}
+		}
+	}
+}
