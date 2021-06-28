@@ -13,7 +13,7 @@
 		text-align: center;
 	}
 
-	header, main, body {
+	header, main, body, .block {
 		outline: 1px solid lightgrey;
 		outline-offset: 0;
 	}
