@@ -1,6 +1,9 @@
 <?php
-
-	global $wp_filesystem;
+/**
+ * Block Name: Team Profiles
+ * 
+ */
+global $wp_filesystem;
 
 // Check rows exists.
 if( have_rows('team') ):
@@ -12,7 +15,7 @@ if( have_rows('team') ):
 
 	<li class="profile">
 		<img 
-			src="<?php echo get_sub_field('image')['sizes']['medium']; ?>" 
+			src="<?php echo get_sub_field('image')['sizes']['block_image_small']; ?>" 
 			alt="Profile image of <?php echo get_sub_field('name'); ?>" 
 		/>
 		<h3><?php echo get_sub_field('name'); ?></h3>

@@ -8,6 +8,7 @@
 
 <header class="header">
 	<span class="background">
+		<?php echo $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/blob_header_home.svg'); ?>
 		<?php echo $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/blob_thin.svg'); ?>
 	</span>
 	<a class="logo" href="/">
