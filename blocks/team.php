@@ -5,12 +5,10 @@
  */
 global $wp_filesystem;
 
-// Check rows exists.
 if( have_rows('team') ):
 
 	echo '<ul class="team">';
 
-    // Loop through rows.
     while( have_rows('team') ) : the_row(); ?>
 
 	<li class="profile">

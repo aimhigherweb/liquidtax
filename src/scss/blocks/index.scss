@@ -2,3 +2,15 @@
 @import './team.scss';
 @import './standard.scss';
 @import './logos.scss';
+@import './services.scss';
+
+.block {
+	.cta {
+		margin: 20px auto;
+		text-align: center;
+	}
+
+	.content {
+		@include mixins.child_reset;
+	}
+}
