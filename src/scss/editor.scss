@@ -1,5 +1,6 @@
 /* Custom Editor Styles */
 @use './variables.scss' as var;
+@use './mixins.scss';
 
 @import './global/fonts.scss';
 @import './global/typography.scss';

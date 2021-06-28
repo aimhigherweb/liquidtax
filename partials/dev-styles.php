@@ -18,6 +18,12 @@
 		outline-offset: 0;
 	}
 
+	@media(min-width: 30em) {
+		body::before {
+			content: '30em';
+		}
+	}
+
 	@media(min-width: 40em) {
 		body::before {
 			content: '40em';

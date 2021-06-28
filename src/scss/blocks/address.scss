@@ -12,10 +12,14 @@ address {
 	a {
 		color: inherit;
 		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	svg {
-		margin-right: 2ch;
-		font-size: 1em;
+		height: 1em;
+		margin-right: 1ch;
 	}
 }

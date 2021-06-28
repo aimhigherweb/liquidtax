@@ -38,6 +38,24 @@
 				'icon' => 'location',
 			));
 
+			acf_register_block(array(
+				'name' => 'team_block',
+				'title' => 'Team Profiles',
+				'description' => 'A block to display team profiles',
+				'render_callback' => 'team_block_render_callback',
+				'category' => 'design',
+				'icon' => 'id-alt',
+			));
+
+			acf_register_block(array(
+				'name' => 'testimonials_block',
+				'title' => 'Testimonials',
+				'description' => 'A block to display team profiles',
+				'render_callback' => 'testimonials_block_render_callback',
+				'category' => 'design',
+				'icon' => 'format-chat',
+			));
+
 		}
 	}
 	add_action('acf/init', 'my_acf_init');
@@ -56,6 +74,14 @@
 
 	function address_block_render_callback($block) {
 		include(get_theme_file_path('/blocks/address.php'));
+	}
+
+	function team_block_render_callback($block) {
+		include(get_theme_file_path('/blocks/team.php'));
+	}
+
+	function testimonials_block_render_callback($block) {
+		include(get_theme_file_path('/blocks/testimonials.php'));
 	}
 
 ?>
