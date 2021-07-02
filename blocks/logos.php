@@ -30,7 +30,7 @@
 						<li>
 							<img 
 								class="logo"
-								src="<?php echo $logo['sizes']['block_image_small']; ?>" 
+								src="<?php echo $logo['sizes']['logos']; ?>" 
 								alt="<?php echo $logo['title']; ?>"
 							/>
 						</li>

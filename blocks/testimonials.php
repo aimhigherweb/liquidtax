@@ -19,7 +19,7 @@ global $wp_filesystem;
 
 			echo '<div class="testimonials" style="--testimonials:' . count(get_field('testimonials')) . '">';
 
-			echo '<span class="background">' . $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/blob_testimonials.svg') . '</span>';
+			echo '<span class="background">' . wp_remote_retrieve_body(wp_remote_get(get_template_directory_uri() . '/src/img/blob_testimonials.svg')) . '</span>';
 
 			while( have_rows('testimonials') ) : the_row(); $i++; ?>
 
@@ -31,7 +31,7 @@ global $wp_filesystem;
 					<?php if($i == 0) {echo 'checked'; }?>
 				/>
 				<label for="testimonial_<?php echo $i; ?>">
-					<?php echo $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/drop.svg'); ?>
+					<?php echo wp_remote_retrieve_body(wp_remote_get(get_template_directory_uri() . '/src/img/drop.svg')); ?>
 					<span><?php echo get_sub_field('name'); ?></span>
 				</label>
 				<blockquote>

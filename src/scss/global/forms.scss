@@ -128,7 +128,7 @@ form {
 	}
 
 	textarea {
-		height: 100px;
+		height: 150px;
 	}
 }
 
@@ -159,6 +159,14 @@ form {
 .wpforms-field-sublabel {
 	margin: -20px 0 20px 10px;
 	font-weight: 400;
+}
+
+.wpforms-title {
+	color: var.$blue;
+	font-family: var.$font_headings;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .wpforms-field-radio {

@@ -92,6 +92,9 @@ nav {
 
 		svg {
 			height: 3em;
+			border: 2px solid transparent;
+
+			border-radius: 50%;
 			fill: var.$yellow;
 			color: var.$navy;
 		}
@@ -101,6 +104,7 @@ nav {
 
 			&:hover {
 				svg {
+					border-color: var.$yellow;
 					fill: var.$navy;
 					color: var.$yellow;
 				}
