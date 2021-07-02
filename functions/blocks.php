@@ -4,7 +4,7 @@
 		if(function_exists('acf_register_block')) {
 			acf_register_block(array(
 				'name' => 'block_standard',
-				'title' => 'Stanadrd Block',
+				'title' => 'Standard Block',
 				'description' => 'A custom content block',
 				'render_callback' => 'block_standard_render_callback',
 				'category' => 'design',

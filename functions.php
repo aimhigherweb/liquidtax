@@ -2,7 +2,6 @@
     require_once(__DIR__ . '/functions/acf.php');
     require_once(__DIR__ . '/functions/wordpress.php');
     require_once(__DIR__ . '/functions/gutenberg.php');
-    require_once(__DIR__ . '/functions/posts.php');
     require_once(__DIR__ . '/functions/blocks.php');
 
     // Main Nav
