@@ -19,10 +19,34 @@
 	}
 
 	h3 {
-		margin: 5px 0;
+		margin: 5px 0 10px;
 		color: var.$blue;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		a {
+			display: flex;
+			align-items: center;
+
+			&:hover {
+				svg {
+					color: var.$white;
+
+					.cls-p {
+						color: var.$blue;
+					}
+				}
+			}
+		}
+
+		svg {
+			height: 1.2em;
+			margin-right: 0.5ch;
+
+			.cls-p {
+				color: var.$white;
+			}
+		}
 	}
 
 	.role {
@@ -50,6 +74,7 @@
 		}
 
 		svg {
+			flex-shrink: 0;
 			height: 2em;
 			margin-right: 2ch;
 		}
@@ -57,7 +82,7 @@
 		dd {
 			display: flex;
 			align-items: center;
-			margin-left: 20px;
+			margin-left: 0;
 		}
 	}
 }
@@ -85,16 +110,16 @@
 				float: left;
 			}
 
-			dl {
-				margin-right: 10px;
-				margin-left: auto;
-				text-align: right;
-			}
+			// dl {
+			// 	margin-right: 10px;
+			// 	margin-left: auto;
+			// 	text-align: right;
+			// }
 
-			dd {
-				justify-content: flex-end;
-				margin-right: 20px;
-			}
+			// dd {
+			// 	justify-content: flex-end;
+			// 	margin-right: 20px;
+			// }
 		}
 	}
 }

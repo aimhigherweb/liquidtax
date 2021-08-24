@@ -40,7 +40,11 @@
 		height: 150px;
 		object-position: center;
 		object-fit: contain;
-		filter: grayscale(1);
+		filter: grayscale(100%);
+
+		&:hover {
+			filter: grayscale(0);
+		}
 	}
 
 	.background {

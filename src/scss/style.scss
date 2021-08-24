@@ -18,4 +18,8 @@ main {
 
 @import './blocks/index.scss';
 
-@import './layouts/home.scss';
+body {
+	&.home {
+		@import './layouts/home.scss';
+	}
+}

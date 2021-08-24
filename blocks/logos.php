@@ -18,7 +18,7 @@
 		<div class="content">
 			<?php echo get_field('content'); ?>
 			<?php
-				if($cta) {
+				if($cta && $cta['text']) {
 					echo '<a href="' . $cta['link'] . '" class="btn cta">' . $cta['text'] . '</a>';
 				}
 			?>

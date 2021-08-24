@@ -2,6 +2,7 @@
 
 	if( function_exists('acf_add_local_field_group') ):
 
+		// Social Menu Icons
 		acf_add_local_field_group(array(
 			'key' => 'group_social_icons',
 			'title' => 'Social Menu Icons',
@@ -37,6 +38,7 @@
 			'description' => '',
 		));
 
+		// Blocks - Logos
 		acf_add_local_field_group(array(
 			'key' => 'group_60d58a487e5f5',
 			'title' => 'Blocks - Logos',
@@ -181,6 +183,7 @@
 			'description' => '',
 		));
 		
+		// Blocks - Services
 		acf_add_local_field_group(array(
 			'key' => 'group_60d1f2a441597',
 			'title' => 'Blocks - Services',
@@ -402,6 +405,7 @@
 			'description' => '',
 		));
 		
+		// Blocks - Standard
 		acf_add_local_field_group(array(
 			'key' => 'group_60d1ec4226a2c',
 			'title' => 'Blocks - Standard',
@@ -543,6 +547,7 @@
 			'description' => '',
 		));
 		
+		// Blocks - Team Profiles
 		acf_add_local_field_group(array(
 			'key' => 'group_60d828dc57fe4',
 			'title' => 'Blocks - Team Profiles',
@@ -707,6 +712,7 @@
 			'description' => '',
 		));
 		
+		// Blocks - Testimonials
 		acf_add_local_field_group(array(
 			'key' => 'group_60dd78f071428',
 			'title' => 'Blocks - Testimonials',
@@ -871,6 +877,7 @@
 			'description' => '',
 		));
 		
+		// Options - Business Info
 		acf_add_local_field_group(array(
 			'key' => 'group_60d1a3105881e',
 			'title' => 'Business Info',
