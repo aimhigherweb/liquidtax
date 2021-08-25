@@ -31,7 +31,6 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-		<link rel="stylesheet" href="https://use.typekit.net/hbj5swp.css" />
 		<base href="<?php echo get_site_url(); ?>" />
 		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/src/img/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/src/img/apple-icon-60x60.png">
@@ -53,11 +52,21 @@
 
 		<title><?php echo wp_get_document_title(); ?></title>
 
-		<?php /*get_template_part('partials/dev-styles');*/ ?>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-54T9NWZ');</script>
+		<!-- End Google Tag Manager -->
 
 	</head>
 
 	<body class="<?php echo $class; ?>">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54T9NWZ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<?php get_template_part('partials/header'); ?>
 
 		<main id="main">

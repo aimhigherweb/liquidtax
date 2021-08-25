@@ -3,16 +3,18 @@
  * Block Name: Logos Block
  * 
  */
-	global $wp_filesystem;
 
 	$cta = get_field('cta');
 	$logos = get_field('logos');
 
 ?>
 
-<section class="block logos">
+<section 
+	id="<?php if(array_key_exists('anchor', $block)){echo $block['anchor'];} ?>" 
+	class="block logos <?php if(array_key_exists('className', $block)){echo $block['className'];} ?>"
+>
 	<span class="background">
-		<?php if($wp_filesystem) {echo $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/blob_thin.svg');} ?>
+		<?php echo wp_remote_retrieve_body(wp_remote_get(get_template_directory_uri() . '/src/img/blob_thin.svg')); ?>
 	</span>
 		<h2><?php echo get_field('heading'); ?></h2>
 		<div class="content">
@@ -28,11 +30,13 @@
 				<ul>
 					<?php foreach( $logos as $logo ): ?>
 						<li>
-							<img 
-								class="logo"
-								src="<?php echo $logo['sizes']['logos']; ?>" 
-								alt="<?php echo $logo['title']; ?>"
-							/>
+							<a target="_blank" href="<?php echo $logo['caption']; ?>">
+								<img 
+									class="logo"
+									src="<?php echo $logo['sizes']['logos']; ?>" 
+									alt="<?php echo $logo['title']; ?>"
+								/>
+							</a>
 						</li>
 					<?php endforeach; ?>
 				</ul>

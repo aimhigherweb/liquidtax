@@ -40,7 +40,7 @@
 				[
 					'name'  => 'Yellow',
 					'slug'  => 'yellow',
-					'color' => '#fafa0f',
+					'color' => '#f0df4a',
 				],
 				[
 					'name'  => 'Light Yellow',

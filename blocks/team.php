@@ -3,7 +3,6 @@
  * Block Name: Team Profiles
  * 
  */
-global $wp_filesystem;
 
 if( have_rows('team') ):
 
@@ -27,7 +26,7 @@ if( have_rows('team') ):
 		<dl class="liquid">
 			<dt>Favourite Liquid</dt>
 			<dd>
-				<?php if($wp_filesystem) {echo $wp_filesystem->get_contents(get_template_directory_uri() . '/src/img/drop_hand.svg');} ?>
+				<?php echo wp_remote_retrieve_body(wp_remote_get(get_template_directory_uri() . '/src/img/drop_hand.svg')); ?>
 				<?php echo get_sub_field('liquid'); ?>
 			</dd>
 		</dl>

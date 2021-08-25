@@ -3,13 +3,14 @@
  * Block Name: Standard Block
  * 
  */
-	global $wp_filesystem;
-
 	$cta = get_field('cta');
 
 ?>
 
-<section class="block standard">
+<section 
+	id="<?php if(array_key_exists('anchor', $block)){echo $block['anchor'];} ?>" 
+	class="block standard <?php if(array_key_exists('className', $block)){echo $block['className'];} ?>"
+>
 	
 	<div>
 		<h2><?php echo get_field('heading'); ?></h2>

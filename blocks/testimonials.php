@@ -3,11 +3,13 @@
  * Block Name: Testimonials
  * 
  */
-global $wp_filesystem;
 
 ?>
 
-<div class="block testimonial">
+<div 
+	id="<?php if(array_key_exists('anchor', $block)){echo $block['anchor'];} ?>" 
+	class="block testimonial <?php if(array_key_exists('className', $block)){echo $block['className'];} ?>"
+>
 	<h2><?php echo get_field('heading'); ?></h2>
 	<div class="content">
 		<?php echo get_field('content'); ?>

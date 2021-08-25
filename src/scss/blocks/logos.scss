@@ -2,11 +2,29 @@
 	position: relative;
 	min-height: 500px;
 	margin-top: 120px;
-	color: var.$white;
+	margin-bottom: 50px;
+
+	color: var.$navy;
+
+	&.block {
+		background: var.$grey_light;
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 100vw;
+			transform: translateX(-50%);
+			background: inherit;
+		}
+	}
 
 	h2 {
 		margin-top: 0;
-		color: var.$yellow;
+		color: var.$navy;
 	}
 
 	.cta {
@@ -48,7 +66,7 @@
 	}
 
 	.background {
-		color: var.$navy;
+		color: var.$grey_light;
 
 		svg {
 			position: absolute;
@@ -76,6 +94,24 @@
 
 @media(min-width: 60em) {
 	.logos {
+		margin-bottom: 100px;
+
+
+		&.block {
+			background: none;
+
+			&:before {
+				content: normal;
+			}
+		}
+
+		.background {
+			svg {
+				top: -100px;
+				height: calc(100% + 150px);
+			}
+		}
+
 		ul {
 			width: calc(100% + 40px);
 			margin-right: -20px;
