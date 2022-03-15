@@ -22,4 +22,8 @@ body {
 	&.home {
 		@import './layouts/home.scss';
 	}
+
+	&.blog {
+		@import './layouts/blog.scss';
+	}
 }

@@ -30,11 +30,11 @@
 					<h3><?php echo get_sub_field('heading'); ?></h3>
 					<p class="sub"><?php echo get_sub_field('sub_heading'); ?></p>
 					<div class="content"><?php echo get_sub_field('content'); ?></div>
-						<a href="<?php echo get_sub_field('link'); ?>" class="block_link">
-							<span class="sr-only">
-								Find out more about <?php echo get_sub_field('heading'); ?>
-							</span>
-						</a>
+					<a href="<?php echo get_sub_field('link'); ?>" class="block_link">
+						<span class="sr-only">
+							Find out more about <?php echo get_sub_field('heading'); ?>
+						</span>
+					</a>
 				</li>
 			
 				<?php endwhile;

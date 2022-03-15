@@ -1,0 +1,20 @@
+.content {
+	h2 {
+		margin: 0;
+		color: var.$blue;
+		text-transform: uppercase;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.sub {
+		a {
+			color: inherit;
+			
+		}
+	}
+}
