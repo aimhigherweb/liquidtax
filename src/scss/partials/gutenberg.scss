@@ -6,6 +6,14 @@
 	}
 }
 
+.wp-block-quote {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 1.5em;
+	line-height: 1.8;
+	text-align: center;
+}
+
 @media(min-width: 40em) {
 	.wp-block-columns {
 		display: flex;
